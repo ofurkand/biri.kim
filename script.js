@@ -2,7 +2,7 @@ const kalanZamanGos = document.getElementById("saat");
 const ilerGos = document.getElementById("ilerleme-gostergesi");
 const ilerYaz = document.getElementById("ilerleme-yazisi");
 const anaYazi = document.getElementById("ana-yazi");
-const vakitYaz = document.getElementById("vakit");
+// const vakitYaz = document.getElementById("vakit");
 const veriDosyasi = "/src/tempAPI.json";
 let _veriler = JSON.parse(localStorage.getItem("veriler"));
 let _baslangicGunuIndexi = localStorage.getItem("baslangicGunuIndexi");
@@ -300,7 +300,7 @@ function kalanZamaniYaz(){
     
     let fark = zamanHesapla(bugununVakitleri().aksam,zaman,true);
 
-    vakitYaz.textContent = "sahur";
+    // vakitYaz.textContent = "sahur";
     if (fark < 0 && !(fark + parseInt(birGundeBulunanMs/1000) < 0)) { // Gün Bitimi
         fark = zamanHesapla(bugununVakitleri(1).imsak,zaman,true);
         anaYazi.textContent = "Sıradaki Sahura Ne Kadar Kaldı?";
@@ -311,7 +311,7 @@ function kalanZamaniYaz(){
         }else{
             fark = zamanHesapla(bugununVakitleri().aksam,zaman);
             anaYazi.textContent = "İftara Ne Kadar Kaldı?";
-            vakitYaz.textContent = "iftar";
+            // vakitYaz.textContent = "iftar";
         }
     }
     ilerlemeYuzdesiniYaz(fark);
