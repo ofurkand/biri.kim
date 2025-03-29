@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 id="ana-yazi">
-            Hayırlı Ramazanlar
+    <div class="container" style="width: clamp(200px, 70vw, 730px);">
+        <h1 id="ana-yazi" style="font-size: clamp(5vw, 5rem, 10vw)">
+            Ramazan Bayramınız <span id="kutlama" style="transition: 1s;">Mübarek Olsun</span>
         </h1>
-        <span id="saat">
+        <!-- <span id="saat"> -->
             <!-- Buraya Saat Gelecek -->
-            --:--:--
-        </span>
+            <!-- --:--:-- -->
+        <!-- </span> -->
         <!-- <p>Proje henüz hayata geçirilmemiştir. Gördüğünüz <span id="vakit"></span> zamanı göstergesi, sitenin boş kalmaması içindir.</p> -->
         <hr/>
         <div class="altBilgiler">
@@ -23,6 +23,22 @@
             <p><b>Açılış Tarihi:</b> 13/03/25</p>
         </div>
     </div>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        const span = document.getElementById('kutlama');
+
+        function getRandomColor() {
+            const r = Math.floor(Math.random() * 256); // 0-255 arası rastgele değer
+            const g = Math.floor(Math.random() * 256); // 0-255 arası rastgele değer
+            const b = Math.floor(Math.random() * 256); // 0-255 arası rastgele değer
+            return `rgb(${r}, ${g}, ${b})`; // RGB formatında döndür
+        }
+
+        function changeColor() {
+            span.style.color = getRandomColor();
+        }
+        changeColor();
+        setInterval(changeColor, 500); // 1 saniyede bir renk değiştir
+    </script>
 </body>
 </html>
