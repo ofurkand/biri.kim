@@ -27,20 +27,21 @@ body{
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: fit-content;
+    max-height: 75vh;
 }
 
 .altBilgiler{
-    width: 100%; display: flex; text-align: center;justify-content: space-between;
+    width: 100%; display: flex; text-align: center;justify-content: space-between; gap:10px;
 }
-
+/* 
 .altBilgiler::before {
     content: "|";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    /* font-size: 20px; */
+    font-size: 20px;
     color: black;
-}
+} */
 
 hr{
     margin: 10px 0;
@@ -57,16 +58,16 @@ p {
     flex-grow: 1;
 }
 
-a{
+/* a{ */
     /* text-decoration-color: blue; */
     /* color: var(--anaRenk); */
     /* transition: color 1s; */
-}
+/* } */
 
-a:hover{
-    color: var(--anaRenk);
+/* a:hover{ */
+    /* color: var(--anaRenk); */
     /* text-shadow: 1px 1px 1px #333; */
-}
+/* } */
 
 #saat {
     font-size: clamp(3rem, 15vw, 30vw);
