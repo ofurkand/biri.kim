@@ -27,7 +27,7 @@ body{
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: fit-content;
-    max-height: 75vh;
+    /* max-height: 75vh; */
 }
 
 .altBilgiler{
